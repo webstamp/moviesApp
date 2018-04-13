@@ -1,0 +1,53 @@
+@primaryColor: #212529;
+@primaryContrastColor: #fff;
+@hoverColor: #b8eff3;
+html {
+  font-size: 14px;
+}
+
+body {
+  //background: @primaryColor;
+  height: 100%;
+}
+.header {
+  background: @primaryColor;
+  padding: 20px;
+}
+.logo {
+  max-width: 100%;
+}
+
+.jumbotron {
+  background: @primaryContrastColor !important;
+}
+
+.jumbotron h1 {
+  text-align: center;
+}
+
+.card {
+  cursor: pointer;
+  // border: 1px dotted #e2e2e2 !important;
+  // box-shadow: 0 2px 2px #212529;
+  margin: 1rem 0;
+}
+
+.pagination {
+  justify-content: center;
+  margin-top: 2em;
+}
+
+a:link,
+a:visited {
+  color: @hoverColor;
+}
+
+a:hover {
+  color: #82b4b8;
+  text-decoration: none;
+}
+
+
+.img-fluid img {max-width: 100% !important;}
+
+.form-group {margin: 1rem 0 0 0}
