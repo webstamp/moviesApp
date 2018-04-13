@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="form-group">
+        <input type="text" class="form-control" (keyup)="filterChange()" [(ngModel)]="searchTextValue" placeholder="Filter By Title">
+    </div>
+</div>
+
+<div class="container-fluid">
+    
+  <div class="row">
+    <div class="card col-sm-3" *ngFor="let movie of allMovies" [routerLink]="['/movie/'+movie.id]" routerLinkActive="active">
+      <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{ movie.title }}</h5>
+        <p class="card-text">Popularity: {{ movie.popularity | number : '1.0-1' }}</p>
+        <p class="card-text">Vote Count: {{ movie.vote_count }}</p>
+        <p class="card-text">Release Date: {{ movie.release_date | date: 'dd/MM/yyyy' }}</p>
+
+
+
+        <a href="#" [routerLink]="['/movie/'+movie.id]">
+          <div class="btn btn-dark">
+            <i class="fas fa-info-circle"></i> More Details
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <nav aria-label="Page navigation justify-content-center">
+    <ul class="pagination pagination-lg">
+      <li class="page-item">
+        <a class="page-link" (click)="nextPage(1)">1</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" (click)="nextPage(2)">2</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" (click)="nextPage(3)">3</a>
+      </li>
+    </ul>
+  </nav>
+
+
+</div>

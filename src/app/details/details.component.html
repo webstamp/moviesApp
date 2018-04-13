@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="img-fluid">
+        <img src="https://image.tmdb.org/t/p/w500{{selectedMovie?.poster_path}}" alt="movie_image">
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="jumbotron">
+        <h3 class="display-4">
+          {{selectedMovie?.title}}
+        </h3>
+        <p>{{selectedMovie?.overview}}</p>
+      </div>
+
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Original Title</th>
+            <th scope="col">Url</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Popularity</th>
+            <th scope="col">Release Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{selectedMovie?.original_title}}</td>
+            <td>
+              <a target="_blank" href="{{selectedMovie?.homepage}}">website</a>
+            </td>
+            <td>{{ selectedMovie?.vote_average }}</td>
+            <td>{{ selectedMovie?.popularity | number: '1.0-2' }}</td>
+            <td>{{ selectedMovie?.release_date | date: 'dd/MM/yyyy' }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="btn btn-dark" (click)="back()">
+        <i class="fas fa-caret-square-left"></i> Back
+      </div>
+
+    </div>
+  </div>
+</div>
