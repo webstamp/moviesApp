@@ -10,8 +10,7 @@ import { filterMovies} from '../store/action';
 
 @Component({
   selector: "app-movies",
-  templateUrl: "./movies.component.html",
-  styleUrls: ["./movies.component.css"]
+  templateUrl: "./movies.component.html"
 })
 export class MoviesComponent implements OnInit {
 // @select('filteredMovies') filteredMovies$: Observable<Movie[]>

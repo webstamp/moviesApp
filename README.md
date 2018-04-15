@@ -1,12 +1,6 @@
-# MoviesApp
+# DonStoiximan
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
-
-To build and run the application you need to :
-
-1.run `npm install` 
-
-2.run `ng serve`
 
 ## Development server
 
